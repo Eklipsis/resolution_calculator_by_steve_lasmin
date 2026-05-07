@@ -22,7 +22,7 @@ Perfect for:
 1. Navigate to your `ComfyUI/custom_nodes/` directory
 2. Clone this repository:
    ```bash
-   git clone https://github.com/Eklipsis/comfyui-resolution-calculator.git
+   git clone https://github.com/Eklipsis/resolution_calculator_by_steve_lasmin.git
    ```
 3. Restart ComfyUI
 
@@ -49,7 +49,7 @@ The node appears under **utils → Resolution Calculator by Steve Lasmin**.
 ## File Structure
 
 ```
-comfyui-resolution-calculator/
+comfyui-resolution_calculator_by_steve_lasmin/
 ├── __init__.py
 ├── nodes.py
 ├── README.md
