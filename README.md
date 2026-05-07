@@ -49,7 +49,7 @@ The node appears under **utils → Resolution Calculator by Steve Lasmin**.
 ## File Structure
 
 ```
-comfyui-resolution_calculator_by_steve_lasmin/
+resolution_calculator_by_steve_lasmin/
 ├── __init__.py
 ├── nodes.py
 ├── README.md
