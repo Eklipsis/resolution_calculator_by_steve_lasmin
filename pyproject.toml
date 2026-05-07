@@ -9,6 +9,6 @@ dependencies = []
 Repository = "https://github.com/Eklipsis/comfyui-resolution-calculator"
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "stevelasmin4real"
 DisplayName = "Resolution Calculator by Steve Lasmin"
 Icon = ""
