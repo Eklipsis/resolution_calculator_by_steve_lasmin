@@ -22,34 +22,47 @@ class Resolution_Calculator_by_Steve_Lasmin:
                     "min": 32,
                     "max": 2048,
                     "step": 32,
-                    "display": "slider"
+                    "display": "number"
+                }),
+                "aspect_preset": (["custom", "1:1", "3:2", "4:3", "16:9", "16:10", "21:9", "2:3", "3:4", "9:16", "9:21"], {
+                    "default": "custom"
                 }),
                 "width_ratio": ("INT", {
-                    "default": 16,
+                    "default": 2,
                     "min": 1,
                     "max": 999999,
                     "step": 1,
                     "display": "number"
                 }),
                 "height_ratio": ("INT", {
-                    "default": 9,
+                    "default": 3,
                     "min": 1,
                     "max": 999999,
                     "step": 1,
                     "display": "number"
                 }),
-                "multiplier": ([16, 32, 64], {
-                    "default": 32
+                "multiplier": (["16", "32", "64"], {
+                    "default": "32"
                 }),
             }
         }
 
-    RETURN_TYPES = ("INT", "INT")
-    RETURN_NAMES = ("width", "height")
+    RETURN_TYPES = ("INT", "INT", "STRING")
+    RETURN_NAMES = ("width", "height", "preview")
     FUNCTION = "calculate"
     CATEGORY = "utils"
+    OUTPUT_NODE = True
 
-    def calculate(self, resolution, width_ratio, height_ratio, multiplier):
+    def calculate(self, resolution, aspect_preset, width_ratio, height_ratio, multiplier):
+        # Parse preset if not custom
+        if aspect_preset != "custom":
+            w, h = aspect_preset.split(":")
+            width_ratio = int(w)
+            height_ratio = int(h)
+
+        # Convert multiplier from string to int
+        multiplier = int(multiplier)
+
         aspect = width_ratio / height_ratio
 
         # Resolution = maximum dimension (longest side)
@@ -68,7 +81,10 @@ class Resolution_Calculator_by_Steve_Lasmin:
         width = max(multiplier, width)
         height = max(multiplier, height)
 
-        return (int(width), int(height))
+        # Create preview string
+        preview_text = f"Width: {int(width)} px  |  Height: {int(height)} px  |  Aspect: {width_ratio}:{height_ratio}  |  Multiplier: {multiplier}"
+
+        return (int(width), int(height), preview_text)
 
 
 NODE_CLASS_MAPPINGS = {
