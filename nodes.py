@@ -19,9 +19,9 @@ class Resolution_Calculator_by_Steve_Lasmin:
             "required": {
                 "resolution": ("INT", {
                     "default": 1024,
-                    "min": 64,
+                    "min": 32,
                     "max": 2048,
-                    "step": 64,
+                    "step": 32,
                     "display": "slider"
                 }),
                 "width_ratio": ("INT", {
