@@ -1,12 +1,12 @@
 [project]
-name = "comfyui-resolution-calculator"
+name = "resolution_calculator_by_steve_lasmin"
 description = "Calculates width and height from max resolution, aspect ratio, and multiplier for ComfyUI"
 version = "1.0.0"
 license = { file = "LICENSE" }
 dependencies = []
 
 [project.urls]
-Repository = "https://github.com/Eklipsis/comfyui-resolution-calculator"
+Repository = "https://github.com/Eklipsis/resolution_calculator_by_steve_lasmin"
 
 [tool.comfy]
 PublisherId = "stevelasmin4real"
