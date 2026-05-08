@@ -1,7 +1,7 @@
 [project]
 name = "resolution_calculator_by_steve_lasmin"
 description = "Calculates width and height from max resolution, aspect ratio, and multiplier for ComfyUI"
-version = "1.0.0"
+version = "1.0.1"
 license = { file = "LICENSE" }
 dependencies = []
 
