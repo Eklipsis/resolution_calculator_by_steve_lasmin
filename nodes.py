@@ -20,8 +20,8 @@ class Resolution_Calculator_by_Steve_Lasmin:
                 "resolution": ("INT", {
                     "default": 1024,
                     "min": 32,
-                    "max": 2048,
-                    "step": 32,
+                    "max": 4096,
+                    "step": 16,
                     "display": "number"
                 }),
                 "aspect_preset": (["custom", "1:1", "3:2", "4:3", "16:9", "16:10", "21:9", "2:3", "3:4", "9:16", "9:21"], {
